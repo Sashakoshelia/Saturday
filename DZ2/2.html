@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Блочная вёрстка</title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		p.one{
+			color: black;
+			margin: 0px;
+			text-align: center;
+		}
+		div.two{
+			background-color: yellow;
+			margin: 0 auto;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div style="width: 100%; max-width: 980px; margin: 0 auto" >
+		<div style="width: 100%; height: 200px; background-color: orange">
+			<p class="one">header(шапка сайта)</p></div>
+		<div class="two"></div>
+		<div style="width: 100%; height: 50px; background-color: pink;">
+			<p class="one">Блок навигации</p></div>
+	</div>
+	<div style="width: 100%; max-width: 980px; height: 500px; margin: 0 auto;">
+		<div style="width: 30%; height: 500px; background-color: lightblue; float: left;"><p class="one">Левая панель</p></div>
+		<div style="width: 70%; height: 500px; background-color: grey; float: left;"><p class="one">Основной контент страницы</p></div>
+	</div>
+	<div style="width: 100%; max-width: 980px; margin: 0 auto;">
+		<div class="two"></div>
+		<div style="width: 100%; height: 100px; background-color: blue;"><p class="one">footer(низ сайта)</p></div>
+	</div>
+
+	
+
+</body>
+</html>

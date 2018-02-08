@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matrix</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+        var table = new Array(10);
+
+        for (var i = 0; i < table.length; i++) { 
+            table[i] = new Array(10);
+        }
+
+        for (var row = 0; row < table.length; row++) {
+            for (var col = 0; col < table[row].length; col++) {
+                if ((row + col) % 2 == 1)
+                    table[row][col] = "<img src='img/black.jpg' width='70' height='70'/>";
+                else
+                    table[row][col] = "<img src='img/white.jpg' width='70' height='70'/>";
+            }
+        }
+
+        for (var row = 0; row < table.length; row++) {
+            for (var col = 0; col < table[row].length; col++) {
+                document.write(table[row][col]);
+            }
+            document.write("<br/>");
+        }
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang=“en”>
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <style type="text/css">
+    	table { border: 1px solid red; padding: 20px;};
+    </style>
+    <script>
+        window.onload = function() {
+            var list = [];
+            function Person() {
+                this.name = "Alex";
+                this.sur ='Kolins';
+                this.age = '24';
+                this.sex = 'male';
+                this.langs = ['js', 'css', 'html','php'];
+            };
+
+            var exit = false;
+            
+            do {
+                var todo = +prompt('Enter action: 1 - Add person; 2 - Show list; 3 - EXit ');
+                switch(todo) {
+                    case 1: {
+                        addPerson();    
+                        break;
+                    }
+                    case 2: {
+                        showList();
+                        break;
+                    }
+                    case 3:
+                    case 0: {
+                        exit = true;
+                    }
+                }
+            } while(!exit)
+
+            function addPerson() {
+                var pee = new Person();
+                Person.name = prompt('Enter name');
+                list.push(Person);
+            }
+            function showList() {
+                var table = document.createElement('table');    
+                for(var index = 0; index < list.length; index ++) {
+                    var row = document.createElement('tr');
+                    table.appendChild(row);
+                    console.log(index, list, list[index]);
+                    for (property in list[index]) {
+                        var td = document.createElement('td');
+                        td.innerText = list[index][property];
+                        row.appendChild(td);
+                    }
+                }
+                document.body.appendChild(table);
+            }
+        }
+    </script>
+</head>
+<body></body>
+</html>

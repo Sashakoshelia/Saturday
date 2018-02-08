@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sdf</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function Automobile() {
+			this.color = "",
+			this.model = "",
+			this.year = '',
+			this.manufact = '';
+			}
+		var exit = false;
+		do{
+			var list = +prompt('Enter action: 1 - Add car; 2 - Exit')
+			switch(list){
+				case 1:{
+					var table = document.createElement('table');
+					var tabletr = document.createElement('tr');
+	
+					for(car in Automobile) {
+				Automobile[car] = prompt('Введите' + car);
+				var td = document.createElement('td');
+				td.innerText = Automobile[car];
+					}
+					 
+					break;
+				}
+				case 2:{
+					exit = true;
+				}
+			}
+		} while(!exit)
+		console.log(Automobile)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

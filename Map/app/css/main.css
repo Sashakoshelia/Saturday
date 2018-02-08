@@ -1,0 +1,53 @@
+body {
+  background-color: none; }
+
+#map {
+  height: 500px;
+  width: 100%;
+  background-color: grey;
+  margin-bottom: 20px; }
+
+h1 {
+  text-align: center; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 220px;
+  height: 305px;
+  text-align: center;
+  perspective: 1000px;
+  transform-style: preserve-3d; }
+  .container:hover .start {
+    transform: rotateY(-180deg); }
+  .container:hover .end {
+    transform: rotateY(0); }
+
+.end {
+  text-align: center;
+  background: black;
+  color: lightblue;
+  width: 220px;
+  height: 305px;
+  transform: rotateY(-180deg);
+  position: absolute;
+  transition: transform 0.3s;
+  backface-visibility: hidden; }
+
+.start {
+  background-image: url(/images/steve.jpg);
+  position: absolute;
+  z-index: 2;
+  width: 220px;
+  height: 305px;
+  transition: transform 0.3s;
+  backface-visibility: hidden; }
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px; }
+
+p {
+  margin: 0 5px; }

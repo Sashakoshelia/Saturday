@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		// TEXT
+		var us = document.forms.vform.username;
+		var em = document.forms.vform.email;
+		var pas = document.forms.vform.password;
+		//Error
+		var nameEr = document.getElemantById("nameError");
+		var emailEr = document.getElemantById("emailError");
+		var passwordEr = document.getElemantById("passwordError");
+
+		//validator
+		var namVal = /\S/;
+		var emVal = /\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b/i;
+		var passVal = /\d{5,}/;
+
+		//validate
+		function Valid(){
+				if (us.value !== namVal) {
+					us.style.border = "2px solid red";
+					document.getElemantById("user_div");
+					nameEr.textContent = "Введіть ім'я правильно";
+					us.focus();
+					return false;
+			}
+
+				if (em.value !== emVal) {
+					em.style.border = "2px solid red";
+					document.getElemantById("email_div");
+					emailEr.textContent = "Введіть email правильно";
+					em.focus();
+					return false;
+			}
+
+				if (pas.value !== passVal) {
+					pas.style.border = "2px solid red";
+					document.getElemantById("pass_div");
+					passwordEr.textContent = "Введіть pass правильно";
+					pas.focus();
+					return false;
+			}
+		}
+
+		//span error
+		function nameVerify() {
+			if(us.value !=""){
+				us.style.border = "1px solid green";
+				document.getElemantById("user_div").style.color = "#5e6e66";
+				nameEr.innerHTML = "";
+				return true;
+			}
+		}
+
+		function emailVerify() {
+			if(em.value !=""){
+				em.style.border = "1px solid green";
+				document.getElemantById("email_div").style.color = "#5e6e66";
+				emailEr.innerHTML = "";
+				return true;
+			}
+		}
+
+		function passwordVerify() {
+			if(pas.value !=""){
+				pas.style.border = "1px solid green";
+				document.getElemantById("pass_div").style.color = "#5e6e66";
+				passwordEr.innerHTML = "";
+				return true;
+			}
+		}
+
+	</script>
+</head>
+<body>
+		<form name ="vform">
+			<div class="formn">
+				<p>Форма</p>
+				<div id="user_div">
+					<input type="text" name="username" placeholder="Введіть ім'я" ><br/>
+					<span id ="nameError">
+						Заповніть поле
+					</span>
+				</div id = "email_div">
+					<input type="email" name="email" placeholder="Введіть E-mail"><br/>
+					<span id = "emailError">
+						Невірний E-mail
+					</span>
+				<div id = "pass_div">
+					<input type="password" name="password" placeholder="Введіть пароль"><br/>
+					<span id = "passwordError">
+						Невірний пароль
+					</span>
+				</div>
+				<div>
+					<input type="submit" value="Відправити">
+				</div>
+			</div>
+		</form>
+</body>
+</html>

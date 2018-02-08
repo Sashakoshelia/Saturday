@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kalculate</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var one = +prompt("Введіть перше число");
+		var oper = prompt("Введіть оператор");
+        var two = +prompt("Введіть друге число");
+        var result;
+
+        function Sum(a, b) {
+            return  a + b;
+        }
+        function Div(a, b) {
+            return  a / b;
+        }
+        function Mul(a, b) {
+            return  a * b;
+        }
+        function Sub(a, b) {
+            return  a - b;
+        }
+
+        while ( isNaN(one) || isNaN(two)) {
+        	alert('Еммм...там написано Введіть число. Спробуй знову!');
+        	 var one = +prompt("Введіть перше число");
+        	 var two = +prompt("Введіть друге число");
+        }
+          
+        switch(oper) {
+            case '-': {
+                result = Sub(one, two);
+                document.write("Your number = " + result + "<br/>")
+            };
+            break;
+            case '+': {
+                result = Sum(one, two);
+                document.write("Your number = " + result + "<br/>")
+            };
+            break;
+            case '/': {
+                result = Div(one, two);
+                document.write("Your number = " + result + "<br/>")
+            };
+            break;
+             case '*': {
+                result = Mul(one, two);
+                document.write("Your number = " + result + "<br/>")
+            };
+            break;
+            console.log(one, two)
+
+        }
+	</script>
+</head>
+<body>
+
+</body>
+</html>

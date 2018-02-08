@@ -1,0 +1,56 @@
+body{
+	margin: 0 auto;
+}
+
+footer{
+	background: lightblue;
+	width: 100%;
+}
+
+.container .bl2 p{
+	margin-top: 70px;
+	font-size: 24px;
+	text-align: center;
+	color: white;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.containerone p{
+	color: black;
+	text-align: center;
+	margin: 50px;
+}
+
+.bl1{background: lightgreen; flex: 1 1 33%; height: 150px;}
+.bl2{background: blue; flex: 1 1 33%; height: 150px; }
+.bl3{background: orange;flex: 1 1 33%; height: 150px; }
+.bl4{background: lightgreen; flex: 1 1 45%; height: 150px;}
+.bl5{background: blue; flex: 1 1 45%; height: 150px;}
+.bl6{background: red; flex: 1 1 45%; height: 150px;}
+.bl7{background: lightblue; flex: 1 1 45%; height: 150px; }
+.bl8{background: orange;flex: 1 1 45%; height: 150px; }
+.bl9{background: lightblue; flex: 1 1 100%; height: 150px; }
+
+@media screen and (max-width: 425px){
+
+.container{
+	display: flex;
+	flex-flow: column wrap;
+}
+.bl1{background: lightgreen; flex: 1 1 100%; height: 150px; }
+.bl2{background: blue; flex: 1 1 100%; height: 150px; }
+.bl3{background: orange; flex: 1 1 100%; height: 150px; }
+.bl4{background: lightgreen; flex: 1 1 100%; height: 150px;}
+.bl5{background: blue; flex: 1 1 100%; height: 150px;}
+.bl6{background: red; flex: 1 1 100%; height: 150px;}
+.bl7{background: lightblue; flex: 1 1 100%; height: 150px; }
+.bl8{background: orange;flex: 1 1 100%; height: 150px; }
+.bl9{background: lightblue; flex: 1 1 100%; height: 150px; }
+
+}

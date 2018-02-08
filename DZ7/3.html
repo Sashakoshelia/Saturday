@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dfgdfg</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	  function Automobile(color, model, year, manufact) {
+            this.color = color,
+            this.model = model,
+            this.year = year,
+            this.manufact = manufact;
+                }
+        
+        window.onload = function() {
+            var table = document.createElement('table');    
+            document.body.appendChild(table);
+
+            var exit = false;
+
+            do{
+                var list = +prompt('Enter action: 1 - Add car; 2 - Exit')
+                switch(list){
+                    case 1: {
+                        var tabletr = document.createElement('tr');
+                        var car = new Automobile(
+                            prompt('Enter color'),
+                            prompt('Enter model'),
+                            prompt('Enter year'),
+                            prompt('Enter manufact'),
+                        );
+                        for (i in car) {
+                            var td = document.createElement('td');
+                            td.innerText = car[i];
+                            tabletr.appendChild(td);
+                        }
+                        table.appendChild(tabletr);
+                        break;
+                    }
+                    case 2:{
+                        exit = true;
+                    }
+                }
+            } while(!exit)
+        }
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cars</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	 var list = [];
+
+        var exit = false;
+        do{
+            var list = +prompt('Enter action: 1 - Add car; 2 - Exit')
+            switch(list){
+                case 1:{
+                    var automobile = {
+                        color: "",
+                        model: "",
+                        year: '',
+                        manufact: '',
+                    }
+                    for(car in automobile) {
+                        automobile[car] = prompt('Введите' + car)
+                    }
+                    list.push(automobile);
+                    break;
+                }
+                case 2:{
+                    exit = true;
+                }
+            }
+        } while(!exit)
+        console.log(automobile)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

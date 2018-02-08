@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<script type="text/javascript">
+		var a = +prompt("Введіть перше число");
+		var c = prompt("Введіть оператор /, +, -, *.");
+		var b = +prompt("Введіть друге число");
+		var result;
+
+		 while ( isNaN(a) || isNaN(b)) {
+        	alert('Еммм...там написано Введіть число. Спробуй знову!');
+        	 var a = +prompt("Введіть перше число");
+        	 var b = +prompt("Введіть друге число");
+        }
+	
+		switch(c){
+			case "+" :
+				{
+					result = a + b;
+					document.write("Your number = " + result + "<br/>")
+				};
+				break;
+			case "-" :
+				{
+					result = a - b;
+					document.write("Your number = " + result + "<br/>")
+				};
+				break;
+			case "/" :
+				{
+					result = a / b;
+					document.write("Your number = " + result + "<br/>")
+				};
+				break;
+			case "*" :
+				{
+					result = a * b;
+					document.write("Your number = " + result + "<br/>")
+				};
+				break;
+
+			default: {
+				document.write("Ви ввели не оператор")
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
